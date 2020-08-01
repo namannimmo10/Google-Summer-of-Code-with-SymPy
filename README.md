@@ -22,4 +22,4 @@ GSoC. The blog is hosted at [My-GSoC-blog](https://namannimmo10.github.io/emeral
 
 Naman Gera
 
-[Email](namangera15@gmail.com) | [GSoC blog](https://namannimmo10.github.io/emerald/) |  [StackOverflow](https://stackoverflow.com/users/11750129/namannimmo) | [Twitter](https://twitter.com/namannimmo?s=09)
+[Email](mailto:namangera15@gmail.com) | [GSoC blog](https://namannimmo10.github.io/emerald/) |  [StackOverflow](https://stackoverflow.com/users/11750129/namannimmo) | [Twitter](https://twitter.com/namannimmo?s=09)
