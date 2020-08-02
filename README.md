@@ -1,3 +1,5 @@
+![img](/sympy_logo.png)
+
 # GSoC 2020 @[SymPy](https://github.com/sympy/sympy)
 
 This repository showcases my proposal, final report, and the work done during Google Summer of Code 2020 with the SymPy project.
