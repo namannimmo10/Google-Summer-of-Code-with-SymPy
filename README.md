@@ -1,4 +1,4 @@
-![img](/sympy_logo.png)
+![img](/sympy_logo.png) ![img2](/gsoc_logo.png)
 
 # GSoC 2020 @[SymPy](https://github.com/sympy/sympy)
 
