@@ -15,10 +15,14 @@ Mentors:
 * Jason K. Moore ([@moorepants](https://github.com/moorepants))
 * Ishan Joshi ([@ishanaj](https://github.com/ishanaj))
 
+# Work done:
+
 # My GSoC Experience:
 
 I've been writing weekly blog-posts documenting my journey during
 GSoC. The blog is hosted at [My-GSoC-blog](https://namannimmo10.github.io/emerald/).
+
+# Challenges & Learnings:
 
 ------------------------------------------------------------------------------------------------
 
