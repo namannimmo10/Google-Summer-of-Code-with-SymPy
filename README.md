@@ -16,7 +16,8 @@ Mentors:
 * Ishan Joshi ([@ishanaj](https://github.com/ishanaj))
 
 # Work done:
-
+Documentation available at [Control API](https://docs.sympy.org/dev/modules/physics/control/lti.html) and [SymPy-Control Introduction](
+https://docs.sympy.org/dev/modules/physics/control/control.html).
 # My GSoC Experience:
 
 I've been writing weekly blog-posts documenting my journey during
