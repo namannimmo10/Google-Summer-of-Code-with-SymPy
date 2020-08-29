@@ -20,10 +20,12 @@ I continued to show my interest in this project and guess what?? Here is the res
 
 Student: Naman Gera (namannimmo10)
 
-Mentors:
+Official Mentors:
 * Nikhil Maan ([@Sc0rpi0n101](https://github.com/Sc0rpi0n101))
 * Jason K. Moore ([@moorepants](https://github.com/moorepants))
 * Ishan Joshi ([@ishanaj](https://github.com/ishanaj))
+
+Since this was a big project and I had to develop a package from scratch, I got a lot of help from other members of the SymPy development team or even Control theory experts. I would also really like to thank [S.Y. Lee](https://github.com/sylee957), [Oscar Benjamin](https://github.com/oscarbenjamin), [Eric Wieser](https://github.com/eric-wieser), [Ilhan Polat](https://github.com/ilayn), and [Richard Murray](https://github.com/murrayrm) for constantly reviewing my PRs and discussing the API designs with me.
 
 # Work done:
 
