@@ -54,7 +54,7 @@ GSoC. The blog is hosted at [My-GSoC-blog](https://namannimmo10.github.io/emeral
 This experience was so amazing and complete that I learned a lot of things I can't write them all in here.
 
 But, here are a few:
-1. Having to adjust to my team's different timezones was *definitely* a challenge. A lot of times, I used to stay up late at night just so I could discuss things with my mentors who are from the US, for instance. I loved the challenge of working with a remote team and leave my comfort zone of talking in person to work on something.
+1. Having to adjust to my team's different timezones was *definitely* a challenge. I also loved the challenge of working with a remote team and leave my comfort zone of talking in person to work on something.
 2. I can easily say that I learned written communication. Writing accurately is difficult, so I had to learn how to convey my thoughts well enough, because we were working remotely, right?
 3. I never implemented any package from scratch before, so this was a challenge in itself. But the mentors were helpful enough and discussed everything with me. They were readily available for discussions.
 4. If could repeat this again, I would do so. This community is so welcoming, even if you come up with a *naive* approach to solving a particular problem, they will help in improving the code even more because we had to adhere to the SymPy standards.
