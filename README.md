@@ -4,6 +4,7 @@
 
 This repository showcases my proposal, final report, and the work done during Google Summer of Code 2020 with the SymPy project.
 SymPy is a computer algebra system written in pure python.
+
 It all started here:
 
 ![img3](/images/first_email.png)
