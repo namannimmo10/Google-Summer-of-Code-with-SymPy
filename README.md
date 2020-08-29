@@ -11,7 +11,7 @@ It all started here:
 
 The SymPy community is very welcoming and supportive. I sent an email to the SymPy mailing list around Feb 3rd, 2020 asking the community about the scope of adding a new Control Systems engineering package. Initially, their opinions were against this, and students were advised to focus on improving existing SymPy packages, *instead* of adding new packages (core or not).
 
-I continued to show my interest in this project and guess what?? Here is the response I got finally:
+I continued to show my interest in this project and guess what?? Here is the response I got finally (Thanks, [Jason](https://github.com/moorepants)):
 
 ![img4](/images/Jason's_response.png)
 
@@ -53,10 +53,20 @@ Future Work:
 * Further improve the documentation of control package. Add couple more examples to show us the users how to use the implemented as they tend to use any software more if the docs are top-notch.
 * Graphical analyses: `root_locus`, `pole_zero`, `bode`, and `nyquist` plots
 
-# My GSoC Experience:
+# My GSoC Experience and Learnings:
 
 I've been writing weekly blog-posts documenting my journey during
 GSoC. The blog is hosted at [My-GSoC-blog](https://namannimmo10.github.io/emerald/).
+This experience was so amazing and complete that I learned a lot of things I can't write them all in here.
+
+But, here are a few:
+1. Having to adjust to my team's different timezones was *definitely* a challenge. A lot of times, I used to stay up late at night just so I could discuss things with my mentors who are from the US, for instance. I loved the challenge of working with a remote team and leave my comfort zone of talking in person to work on something.
+2. I can easily say that I learned written communication. Writing accurately is difficult, so I had to learn how to convey my thoughts well enough, because we were working remotely, right?
+3. I never implemented any package from scratch before, so this was a challenge in itself. But the mentors were helpful enough and discussed everything with me. They were readily available for discussions.
+4. If could repeat this again, I would do so. This community is so welcoming, even if you come up with a *naive* approach to solving a particular problem, they will help in improving the code even more because we had to adhere to the SymPy standards.
+
+
+`:wq` for now
 
 ------------------------------------------------------------------------------------------------
 
