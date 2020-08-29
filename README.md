@@ -7,7 +7,7 @@ SymPy is a computer algebra system written in pure python.
 
 It all started here:
 
-![img3](/images/first_email.png)
+![img3](/first_email.png)
 
 The SymPy community is very welcoming and supportive. I sent an email on the SymPy mailing list around Feb 3rd, 2020 asking the community about the scope of adding a new Control Systems engineering package. Initially, their opinions were against this, and students were advised to focus on improving existing SymPy packages, *instead* of adding new packages (core or not).
 
