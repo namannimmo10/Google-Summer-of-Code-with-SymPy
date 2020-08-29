@@ -41,12 +41,6 @@ Major additions:
 Miscellaneous PRs opened in the summer:
 * [sympy/sympy-bot#87](https://github.com/sympy/sympy-bot/pull/87) - Adds *physics.control* as valid submodule.
 * [sympy/sympy#20008](https://github.com/sympy/sympy/pull/20008) - Modify docs of `is_stable` method in `TransferFunction` class.
-* [sympy/sympy#19994](https://github.com/sympy/sympy/pull/19994) - Docs: Fix typo in *ellipse.py*
-
-Reviewed:
-* [sympy/sympy#19783](https://github.com/sympy/sympy/pull/19783) - `Dagger()` * `IdentityOperator()` now simplifies by default
-* [sympy/sympy#19807](https://github.com/sympy/sympy/pull/19807) - Implemented an algorithm to find a rational point on a conic.
-* [sympy/sympy#19363](https://github.com/sympy/sympy/pull/19363) - Wrote test for issue 19358: KeyError from `dsolve`.
 
 Future Work:
 * Add `StateSpace` class for creating State space models
