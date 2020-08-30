@@ -44,7 +44,7 @@ Miscellaneous PRs opened in the summer:
 
 Future Work:
 * Add `StateSpace` class for creating State space models
-* Further improve the documentation of control package. Add couple more examples to show us the users how to use the implemented as they tend to use any software more if the docs are top-notch.
+* Further improve the documentation of control package. Add couple more examples to show us the users how to use the implemented functionality as they tend to use any software more if the docs are top-notch.
 * Graphical analyses: `root_locus`, `pole_zero`, `bode`, and `nyquist` plots
 
 # My GSoC Experience and Learnings:
