@@ -15,7 +15,7 @@ I continued to show my interest in this project and guess what?? Here is the res
 
 ![img4](/images/Jason's_response.png)
 
-# Project: [Control Theory - Implement a control systems package](https://summerofcode.withgoogle.com/projects/#6580631821090816)
+# Project: [Control Theory - Implement a control systems package](https://summerofcode.withgoogle.com/archive/2020/projects/5417784797822976/)
 
 
 Student: Naman Gera (namannimmo10)
