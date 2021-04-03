@@ -29,7 +29,7 @@ Since this was a big project and I had to develop a package from scratch, I got 
 
 # Work done:
 
-My main focus was to implement in SymPy, a basic Control Systems functionality from scratch. This can be used by Control engineers or students to solve various [control theory](https://en.wikipedia.org/wiki/Control_theory) related problems. Being a part of SymPy, this is purely *symbolic* in nature. The advantage of this package over other packages/libraries (which are great, btw!) like [harold](https://github.com/ilayn/harold) and [python-control](https://github.com/python-control/python-control) is that the solutions obtained from it are highly accurate and do not rely on numerical methods to approximate the solutions. The solutions obtained are in a compact form that can be used for further analysis. **Documentation** is available at [Control API](https://docs.sympy.org/dev/modules/physics/control/lti.html) and [Control Intro](https://docs.sympy.org/dev/modules/physics/control/control.html).
+My main focus was to implement in SymPy, a basic Control Systems functionality from scratch. This can be used by Control engineers or professors/students to solve various [control theory](https://en.wikipedia.org/wiki/Control_theory) related problems. Being a part of SymPy, this is purely *symbolic* in nature. The advantage of this package over other packages/libraries (which are great, btw!) like [harold](https://github.com/ilayn/harold) and [python-control](https://github.com/python-control/python-control) is that the solutions obtained from it are highly accurate and do not rely on numerical methods to approximate the solutions. The solutions obtained are in a compact form that can be used for further analysis. **Documentation** is available at [Control API](https://docs.sympy.org/dev/modules/physics/control/lti.html) and [Control Intro](https://docs.sympy.org/dev/modules/physics/control/control.html).
 
 PULL REQUESTS - 
 
@@ -166,6 +166,109 @@ p + 3
 ─────
 p + 5
 ```
+
+Now, let's do some SISO transfer function algebra:
+
+```python
+>>> init_printing(use_unicode=False)
+>>> G6 = TransferFunction(s + 1, s**2 + s + 1, s)
+>>> G6
+  s + 1   
+----------
+ 2        
+s  + s + 1
+>>> G7 = TransferFunction(s - p, s + 3, s)
+>>> G7
+-p + s
+------
+s + 3 
+>>> G8 = TransferFunction(4*s**2 + 2*s - 4, s - 1, s)
+>>> G8
+   2          
+4*s  + 2*s - 4
+--------------
+    s - 1     
+>>> G9 = TransferFunction(a - s, s**2 + 4, s)
+>>> G9
+a - s 
+------
+ 2    
+s  + 4
+
+>>> G6 + G7 # just adding two TFs will leave them unevaluated
+  s + 1      -p + s
+---------- + ------
+ 2           s + 3 
+s  + s + 1         
+>>> # `.doit()` will evaluate the result above
+>>> # `.rewrite(TransferFunction)` does the same.
+>>> _.doit()
+         ⎛ 2        ⎞                  
+(-p + s)⋅⎝s  + s + 1⎠ + (s + 1)⋅(s + 3)
+───────────────────────────────────────
+                  ⎛ 2        ⎞         
+          (s + 3)⋅⎝s  + s + 1⎠
+>>> G8 - G9
+   2                   
+4⋅s  + 2⋅s - 4   -a + s
+────────────── + ──────
+    s - 1         2    
+                 s  + 4
+>>> G6 * G9
+⎛  s + 1   ⎞ ⎛a - s ⎞
+⎜──────────⎟⋅⎜──────⎟
+⎜ 2        ⎟ ⎜ 2    ⎟
+⎝s  + s + 1⎠ ⎝s  + 4⎠
+>>> G8 * G9 + G6 - G7 # do all at the same time
+⎛   2          ⎞                              
+⎜4⋅s  + 2⋅s - 4⎟ ⎛a - s ⎞     s + 1      p - s
+⎜──────────────⎟⋅⎜──────⎟ + ────────── + ─────
+⎝    s - 1     ⎠ ⎜ 2    ⎟    2           s + 3
+                 ⎝s  + 4⎠   s  + s + 1
+>>> (G8 * G9 + G6).rewrite(TransferFunction)
+        ⎛ 2        ⎞ ⎛   2          ⎞                   ⎛ 2    ⎞
+(a - s)⋅⎝s  + s + 1⎠⋅⎝4⋅s  + 2⋅s - 4⎠ + (s - 1)⋅(s + 1)⋅⎝s  + 4⎠
+────────────────────────────────────────────────────────────────
+                         ⎛ 2    ⎞ ⎛ 2        ⎞                  
+                 (s - 1)⋅⎝s  + 4⎠⋅⎝s  + s + 1⎠
+```
+
+A class for representing negative feedback interconnection between input/output systems was also added - `Feedback`.
+Here's how solve a basic block diagram problem (having a negative feedback) with that class:
+
+![img6](images/block.png)
+
+```python
+>>> from sympy.physics.control import Feedback
+>>> G = plant = TransferFunction(2*s**2 + 5*s + 1, s**2 + 2*s + 3, s)
+>>> C = controller = TransferFunction(5*(s + 2), s + 10, s)
+>>> velocity = Feedback(plant, controller)
+>>> velocity
+        ⎛   2          ⎞       
+        ⎜2⋅s  + 5⋅s + 1⎟       
+        ⎜──────────────⎟       
+        ⎜  2           ⎟       
+        ⎝ s  + 2⋅s + 3 ⎠       
+───────────────────────────────
+    ⎛   2          ⎞           
+1   ⎜2⋅s  + 5⋅s + 1⎟ ⎛5⋅s + 10⎞
+─ + ⎜──────────────⎟⋅⎜────────⎟
+1   ⎜  2           ⎟ ⎝ s + 10 ⎠
+    ⎝ s  + 2⋅s + 3 ⎠
+>>> velocity.doit() # this gives the resultant closed-loop transfer function
+                        ⎛ 2          ⎞ ⎛   2          ⎞               
+               (s + 10)⋅⎝s  + 2⋅s + 3⎠⋅⎝2⋅s  + 5⋅s + 1⎠               
+──────────────────────────────────────────────────────────────────────
+⎛         ⎛ 2          ⎞              ⎛   2          ⎞⎞ ⎛ 2          ⎞
+⎝(s + 10)⋅⎝s  + 2⋅s + 3⎠ + (5⋅s + 10)⋅⎝2⋅s  + 5⋅s + 1⎠⎠⋅⎝s  + 2⋅s + 3⎠
+>>> velocity.doit().simplify() # we can further cancel poles and zeros
+                      ⎛   2          ⎞              
+             (s + 10)⋅⎝2⋅s  + 5⋅s + 1⎠              
+────────────────────────────────────────────────────
+          ⎛   2          ⎞            ⎛ 2          ⎞
+5⋅(s + 2)⋅⎝2⋅s  + 5⋅s + 1⎠ + (s + 10)⋅⎝s  + 2⋅s + 3⎠
+```
+
 
 # My GSoC Experience and Learnings:
 
