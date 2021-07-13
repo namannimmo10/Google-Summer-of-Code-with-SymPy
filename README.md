@@ -36,7 +36,7 @@ PULL REQUESTS -
 Major additions:
 * (Merged) [sympy/sympy#19390](https://github.com/sympy/sympy/pull/19390) - Adds `TransferFunction`, `Series`, `Parallel`, and `Feedback` classes for control package.
 * (Merged) [sympy/sympy#19896](https://github.com/sympy/sympy/pull/19896) - Adds other useful methods in `TransferFunction` class.
-* (Open) [sympy/sympy#19761](https://github.com/sympy/sympy/pull/19761) - Adds `TransferFunctionMatrix` class in *physics.control*.
+* (Merged) [sympy/sympy#19761](https://github.com/sympy/sympy/pull/19761) - Adds `TransferFunctionMatrix` class in *physics.control*.
 
 Miscellaneous PRs opened in the summer:
 * (Merged) [sympy/sympy-bot#87](https://github.com/sympy/sympy-bot/pull/87) - Adds *physics.control* as valid submodule.
