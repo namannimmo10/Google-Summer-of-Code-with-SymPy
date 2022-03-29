@@ -291,4 +291,4 @@ Edit: I'm mentoring for SymPy in GSoC 2021.
 
 Naman Gera (namannimmo)
 
-[Email](mailto:namangera15@gmail.com) | [GSoC blog](https://namannimmo10.github.io/emerald/) |  [StackOverflow](https://stackoverflow.com/users/11750129/namannimmo) | [Twitter](https://twitter.com/namannimmo?s=09) | [Quora](https://www.quora.com/profile/Naman-Gera-11/)
+[Email](mailto:namangera15@gmail.com) | [GSoC blog](https://namannimmo10.github.io/emerald/) |  [StackOverflow](https://stackoverflow.com/users/11750129/namannimmo) | [Quora](https://www.quora.com/profile/Naman-Gera-11/)
